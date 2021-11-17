@@ -9,7 +9,8 @@ const dataURI = 'data:image/Jpeg;base64,' + base64Image;
 nodeHtmlToImage({
   output: './image.png',
   content: { background_image: dataURI },
-html:`<!DOCTYPE html>
+
+  html: `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -115,53 +116,54 @@ html:`<!DOCTYPE html>
         }
 
         /*
+
             !Positioning for specific Sections
         */
-        .combos-of-the-day {
-            position: fixed;
-            top: 210px;
-            left: 40px;
-        }
-
         .special-offer-zone {
             position: fixed;
             top: 110px;
             left: 40px;
         }
 
+        .combos-of-the-day {
+            position: fixed;
+            top: 250px;
+            left: 40px;
+        }
+
         .chicken-section {
             position: fixed;
-            top: 330px;
+            top: 365px;
             left: 40px;
         }
 
         .fish-and-sea-food-first-page {
             position: fixed;
-            top: 490px;
+            top: 520px;
             left: 40px;
         }
 
         .fish-and-sea-food-second-page {
             position: fixed;
-            top: 30px;
+            top: 20px;
             left: 520px;
         }
 
         .river-fish {
             position: fixed;
-            top: 170px;
+            top: 330px;
             left: 520px;
         }
 
         .mutton-section {
             position: fixed;
-            top: 410px;
+            top: 560px;
             left: 520px;
         }
 
         .contact-me-section {
             position: fixed;
-            top: 600px;
+            top: 610px;
             left: 560px;
         }
     </style>
@@ -200,6 +202,30 @@ html:`<!DOCTYPE html>
                     -169
                 </div>
             </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    -189
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    -189
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
 
         </div>
         <!-- ! End Of Special Offer -->
@@ -215,7 +241,7 @@ html:`<!DOCTYPE html>
                     CP1. CP1(1kg Chicken Curry Cut + 500gm Prawn)
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -227,7 +253,7 @@ html:`<!DOCTYPE html>
                     CP1. CP1(1kg Chicken Curry Cut + 500gm Prawn)
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -248,7 +274,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -260,7 +286,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -272,7 +298,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -284,7 +310,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -296,7 +322,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -317,7 +343,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -329,7 +355,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -341,7 +367,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -353,7 +379,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -365,7 +391,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -377,37 +403,38 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
                 </div>
             </div>
-            <div class="item-row row ">
-
-                <div class="item-name">
-                    S1.Rohu
-                </div>
-                <div class="item-MRP">
-                    -189
-                </div>
-                <div class="item-offerPrice">
-                    -169
-                </div>
-            </div>
+           
         </div>
         <!-- ! End Of Fish And SeaFood -->
 
         <!-- todo End OF 1st Page -->
         <!-- ! Continue of Fish And SeaFood on 2nd Page -->
         <div class="fish-and-sea-food-second-page item-Section">
+        <div class="item-row row ">
+
+        <div class="item-name">
+            S1.Rohu
+        </div>
+        <div class="item-MRP">
+            
+        </div>
+        <div class="item-offerPrice">
+            -169
+        </div>
+    </div>
             <div class="item-row row ">
 
                 <div class="item-name">
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -419,7 +446,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -431,7 +458,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -443,7 +470,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -455,7 +482,79 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    
+                </div>
+                <div class="item-offerPrice">
+                    -169
+                </div>
+            </div>
+            <div class="item-row row ">
+
+                <div class="item-name">
+                    S1.Rohu
+                </div>
+                <div class="item-MRP">
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -476,7 +575,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -488,7 +587,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -500,7 +599,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -512,7 +611,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -524,7 +623,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -536,7 +635,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -548,7 +647,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -560,7 +659,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -582,7 +681,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -594,7 +693,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -606,7 +705,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -618,7 +717,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -630,7 +729,7 @@ html:`<!DOCTYPE html>
                     S1.Rohu
                 </div>
                 <div class="item-MRP">
-                    -189
+                    
                 </div>
                 <div class="item-offerPrice">
                     -169
@@ -641,7 +740,7 @@ html:`<!DOCTYPE html>
 
 
         <!-- Contact Me Section -->
-        <div class="contact-me-section">
+        <!-- <div class="contact-me-section">
             <div class="contact-heading">
                 TO ORDER YOUR FAVORITE FISH | CHICKEN | MUTTON
                 <hr class="last-line" />
@@ -655,24 +754,22 @@ html:`<!DOCTYPE html>
                 </div>
             </center>
 
-        </div>
+        </div> -->
 
 
 
 
 
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                    crossorigin="anonymous">
-                    </script>
-                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-                        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-                        crossorigin="anonymous"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-                        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-                        crossorigin="anonymous"></script>
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>`,
-
 }).then(() => console.log('The image was created successfully!'));
