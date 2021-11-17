@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+const nodeHtmlToImage = require('node-html-to-image');
+
+const fs = require('fs');
+
+const image = fs.readFileSync('./BgImg.jpg');
+const base64Image = new Buffer.from(image).toString('base64');
+const dataURI = 'data:image/Jpeg;base64,' + base64Image;
+
+nodeHtmlToImage({
+  output: './image.png',
+  content: { background_image: dataURI },
+html:`<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,7 +21,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         .main-Section {
-            background-image: url("./Meatable Template.png");
+            background-image: url("{{background_image}}");
             background-repeat: no-repeat;
             background-size: contain;
             height: 750px;
@@ -662,4 +673,6 @@
                         crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html>`,
+
+}).then(() => console.log('The image was created successfully!'));
