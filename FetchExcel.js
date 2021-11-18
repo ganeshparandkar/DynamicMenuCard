@@ -5,18 +5,12 @@ const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
   'https://www.googleapis.com/auth/spreadsheets',
 ]);
 
-let special_offer = [];
-let combo_offer = [];
-let chicken_items = [];
-let fish_and_seaFood_sec1 = [];
-let fish_and_seaFood_sec2 = [];
-let river_fish = [];
-let mutton_items = [];
+
 
 client.authorize((err, tokens) => {
   if (err) {
     console.log(err);
-    return; // just get out from the function
+    return; 
   } else {
     console.log('Connected');
     gsrun(client).then((data) => {
