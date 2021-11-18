@@ -1,92 +1,19 @@
+//! Importing required Packages 
 const nodeHtmlToImage = require('node-html-to-image');
-const Handlebars = require('handlebars');
 const fs = require('fs');
 
-function UpdateMyData() {
-  // Function to fill the Not Available
-  if (data.special_offer_zone.length < 3) {
-    while (data.Chicken.length != 3) {
-      data.Chicken.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-  if (data.combos_of_the_day.length < 2) {
-    while (data.Chicken.length != 2) {
-      data.Chicken.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-  if (data.Chicken.length < 5) {
-    while (data.Chicken.length != 5) {
-      data.Chicken.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-  if (data.river_fish.length < 8) {
-    while (data.river_fish.length != 8) {
-      data.river_fish.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-  if (data.fish_and_seaFood_sec1.length < 6) {
-    while (data.fish_and_seaFood_sec1.length != 6) {
-      data.fish_and_seaFood_sec1.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-  if (data.fish_and_seaFood_sec2.length < 11) {
-    while (data.fish_and_seaFood_sec2.length != 11) {
-      data.fish_and_seaFood_sec2.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-  if (data.Mutton.length < 5) {
-    while (data.Mutton.length != 5) {
-      data.Mutton.push({ menu_name: 'NA', Offer_Price: '-' });
-    }
-  }
-}
-
+// ! Preparing the Image
 const image = fs.readFileSync('./BgImg.jpg');
 const base64Image = new Buffer.from(image).toString('base64');
 const dataURI = 'data:image/Jpeg;base64,' + base64Image;
 
-let data = {
-  special_offer_zone: [
-    { menu_name: 'tandoor', MRP: 150, Offer_Price: 123 },
-    { menu_name: 'Leg', MRP: 150, Offer_Price: 1234 },
-  ],
-  combos_of_the_day: [
-    { menu_name: 'tandoor', Offer_Price: 123 },
-    { menu_name: 'Leg', Offer_Price: 1234 },
-    { menu_name: 'bla', Offer_Price: 442 },
-  ],
-  Chicken: [
-    { menu_name: 'C1.Chicken Skinout', Offer_Price: '249' },
-    { menu_name: 'C2.Chicken Boneless', Offer_Price: '369' },
-    { menu_name: 'C3.Chicken Drumstick', Offer_Price: '329' },
- ],
-  fish_and_seaFood_sec1: [
-    { menu_name: 'tandoor', Offer_Price: 123 },
-    { menu_name: 'Leg', Offer_Price: 1234 },
-    { menu_name: 'bla', Offer_Price: 442 },
-  ],
 
-  fish_and_seaFood_sec2: [
-    { menu_name: 'tandoor', Offer_Price: 123 },
-    { menu_name: 'Leg', Offer_Price: 1234 },
-    { menu_name: 'bla', Offer_Price: 442 },
-  ],
-  river_fish: [
-    { menu_name: 'RF1.  Rohu', Offer_Price: '179' },
-    { menu_name: 'RF2.  Catla', Offer_Price: '219' },
-    { menu_name: 'RF3.  Roopchand', Offer_Price: '179' },
-    { menu_name: 'RF4.  SeaBass', Offer_Price: '689' },
-    { menu_name: 'RF5.  Pabda', Offer_Price: '489' },
- 
-],
-  Mutton: [
-    { menu_name: 'tandoor', Offer_Price: 123 },
-    { menu_name: 'Leg', Offer_Price: 1234 },
-  ],
-};
 
-UpdateMyData();
 
+
+
+
+// ! Code to convert HTML into an Image 
 nodeHtmlToImage({
   content: [
     {
@@ -141,8 +68,12 @@ nodeHtmlToImage({
   
           }
   
-          .tem-name {
-              padding-left: px;
+          .item-Id {
+              max-width: fit-content;
+          }
+  
+          .item-name {
+              padding-left: 0px;
           }
   
           .item-MRP {
@@ -202,9 +133,9 @@ nodeHtmlToImage({
           }
   
           /*
-  
-              !Positioning for specific Sections
-          */
+    
+                !Positioning for specific Sections
+            */
           .special-offer-zone {
               position: fixed;
               top: 110px;
@@ -276,18 +207,21 @@ nodeHtmlToImage({
                   </div>
               </div>
               <br>
-
+  
               {{#each data.special_offer_zone}}
               <div class="item-row row ">
   
-                  <div class="item-name">
+                  <div class="item-Id col">
+                      {{menu_id}}
+                  </div>
+                  <div class="item-name col">
                       {{menu_name}}
                   </div>
-                  <div class="item-MRP">
+                  <div class="item-MRP col">
                       {{MRP}}
                   </div>
-                  <div class="item-offerPrice">
-                        {{Offer_Price}}
+                  <div class="item-offerPrice col">
+                      {{Offer_Price}}
                   </div>
               </div>
               {{/each}}
@@ -299,22 +233,25 @@ nodeHtmlToImage({
               <div class="heading" style="margin-bottom: -2px;">
                   COMBO"S OF THE DAY
               </div>
-           
+  
               {{#each data.combos_of_the_day}}
               <div class="item-row row ">
   
-                  <div class="item-name">
+                  <div class="item-Id col">
+                      {{menu_id}}
+                  </div>
+                  <div class="item-name col">
                       {{menu_name}}
                   </div>
-                  <div class="item-MRP">
-                      
+                  <div class="item-MRP col">
+  
                   </div>
-                  <div class="item-offerPrice">
-                        {{Offer_Price}}
+                  <div class="item-offerPrice col">
+                      {{Offer_Price}}
                   </div>
               </div>
               {{/each}}
-       
+  
           </div>
           <!-- ! End of Combo"s Day -->
   
@@ -324,23 +261,26 @@ nodeHtmlToImage({
                   CHICKEN
               </div>
   
-         
+  
               {{#each data.Chicken}}
               <div class="item-row row ">
   
-                  <div class="item-name">
+                  <div class="item-Id col">
+                      {{menu_id}}
+                  </div>
+                  <div class="item-name col">
                       {{menu_name}}
                   </div>
-                  <div class="item-MRP">
-                      
+                  <div class="item-MRP col">
+  
                   </div>
-                  <div class="item-offerPrice">
-                        {{Offer_Price}}
+                  <div class="item-offerPrice col">
+                      {{Offer_Price}}
                   </div>
               </div>
               {{/each}}
-         
-          
+  
+  
           </div>
           <!-- ! End Of CHICKEN -->
   
@@ -350,45 +290,48 @@ nodeHtmlToImage({
                   Fish And SeaFood
               </div>
   
-            
+  
               {{#each data.fish_and_seaFood_sec1}}
               <div class="item-row row ">
   
-                  <div class="item-name">
+                  <div class="item-Id col">
+                      {{menu_id}}
+                  </div>
+                  <div class="item-name col">
                       {{menu_name}}
                   </div>
-                  <div class="item-MRP">
-                      
+                  <div class="item-MRP col">
+  
                   </div>
-                  <div class="item-offerPrice">
-                        {{Offer_Price}}
+                  <div class="item-offerPrice col">
+                      {{Offer_Price}}
                   </div>
               </div>
               {{/each}}
-       
+  
           </div>
           <!-- ! End Of Fish And SeaFood -->
   
           <!-- todo End OF 1st Page -->
-
+  
           <!-- ! Continue of Fish And SeaFood on 2nd Page -->
           <div class="fish-and-sea-food-second-page item-Section">
-    
-           
-          {{#each data.fish_and_seaFood_sec2}}
-          <div class="item-row row ">
-
-              <div class="item-name">
-                  {{menu_name}}
+  
+  
+              {{#each data.fish_and_seaFood_sec2}}
+              <div class="item-row row ">
+  
+                  <div class="item-name col">
+                      {{menu_name}}
+                  </div>
+                  <div class="item-MRP">
+  
+                  </div>
+                  <div class="item-offerPrice">
+                      {{Offer_Price}}
+                  </div>
               </div>
-              <div class="item-MRP">
-                  
-              </div>
-              <div class="item-offerPrice">
-                    {{Offer_Price}}
-              </div>
-          </div>
-          {{/each}}
+              {{/each}}
           </div>
           <!-- ! End Of Fish And SeaFood -->
   
@@ -400,15 +343,18 @@ nodeHtmlToImage({
   
               {{#each data.river_fish}}
               <div class="item-row row ">
-    
-                  <div class="item-name">
+  
+                  <div class="item-Id col">
+                      {{menu_id}}
+                  </div>
+                  <div class="item-name col">
                       {{menu_name}}
                   </div>
-                  <div class="item-MRP">
-                      
+                  <div class="item-MRP col">
+  
                   </div>
-                  <div class="item-offerPrice">
-                        {{Offer_Price}}
+                  <div class="item-offerPrice col">
+                      {{Offer_Price}}
                   </div>
               </div>
               {{/each}}
@@ -425,15 +371,18 @@ nodeHtmlToImage({
   
               {{#each data.Mutton}}
               <div class="item-row row ">
-    
-                  <div class="item-name">
+  
+                  <div class="item-Id col">
+                      {{menu_id}}
+                  </div>
+                  <div class="item-name col">
                       {{menu_name}}
                   </div>
-                  <div class="item-MRP">
-                      
+                  <div class="item-MRP col">
+  
                   </div>
-                  <div class="item-offerPrice">
-                        {{Offer_Price}}
+                  <div class="item-offerPrice col">
+                      {{Offer_Price}}
                   </div>
               </div>
               {{/each}}
@@ -444,20 +393,20 @@ nodeHtmlToImage({
   
           <!-- Contact Me Section -->
           <!-- <div class="contact-me-section">
-              <div class="contact-heading">
-                  TO ORDER YOUR FAVORITE FISH | CHICKEN | MUTTON
-                  <hr class="last-line" />
-              </div>
-              <center>
-                  <div class="call-section"">
-                      
-                          CALL /WHATSAPP
-                          8884442062
-              
-                  </div>
-              </center>
-  
-          </div> -->
+                <div class="contact-heading">
+                    TO ORDER YOUR FAVORITE FISH | CHICKEN | MUTTON
+                    <hr class="last-line" />
+                </div>
+                <center>
+                    <div class="call-section"">
+                        
+                            CALL /WHATSAPP
+                            8884442062
+                
+                    </div>
+                </center>
+    
+            </div> -->
   
   
   

@@ -43,8 +43,12 @@
 
         }
 
-        .tem-name {
-            padding-left: px;
+        .item-Id {
+            max-width: fit-content;
+        }
+
+        .item-name {
+            padding-left: 0px;
         }
 
         .item-MRP {
@@ -104,9 +108,9 @@
         }
 
         /*
-
-            !Positioning for specific Sections
-        */
+  
+              !Positioning for specific Sections
+          */
         .special-offer-zone {
             position: fixed;
             top: 110px;
@@ -182,14 +186,17 @@
             {{#each data.special_offer_zone}}
             <div class="item-row row ">
 
-                <div class="item-name">
+                <div class="item-Id col">
+                    {{menu_id}}
+                </div>
+                <div class="item-name col">
                     {{menu_name}}
                 </div>
-                <div class="item-MRP">
+                <div class="item-MRP col">
                     {{MRP}}
                 </div>
-                <div class="item-offerPrice">
-                      {{Offer_Price}}
+                <div class="item-offerPrice col">
+                    {{Offer_Price}}
                 </div>
             </div>
             {{/each}}
@@ -201,22 +208,25 @@
             <div class="heading" style="margin-bottom: -2px;">
                 COMBO"S OF THE DAY
             </div>
-         
+
             {{#each data.combos_of_the_day}}
             <div class="item-row row ">
 
-                <div class="item-name">
+                <div class="item-Id col">
+                    {{menu_id}}
+                </div>
+                <div class="item-name col">
                     {{menu_name}}
                 </div>
-                <div class="item-MRP">
-                    
+                <div class="item-MRP col">
+
                 </div>
-                <div class="item-offerPrice">
-                      {{Offer_Price}}
+                <div class="item-offerPrice col">
+                    {{Offer_Price}}
                 </div>
             </div>
             {{/each}}
-     
+
         </div>
         <!-- ! End of Combo"s Day -->
 
@@ -226,23 +236,26 @@
                 CHICKEN
             </div>
 
-       
+
             {{#each data.Chicken}}
             <div class="item-row row ">
 
-                <div class="item-name">
+                <div class="item-Id col">
+                    {{menu_id}}
+                </div>
+                <div class="item-name col">
                     {{menu_name}}
                 </div>
-                <div class="item-MRP">
-                    
+                <div class="item-MRP col">
+
                 </div>
-                <div class="item-offerPrice">
-                      {{Offer_Price}}
+                <div class="item-offerPrice col">
+                    {{Offer_Price}}
                 </div>
             </div>
             {{/each}}
-       
-        
+
+
         </div>
         <!-- ! End Of CHICKEN -->
 
@@ -252,22 +265,25 @@
                 Fish And SeaFood
             </div>
 
-          
+
             {{#each data.fish_and_seaFood_sec1}}
             <div class="item-row row ">
 
-                <div class="item-name">
+                <div class="item-Id col">
+                    {{menu_id}}
+                </div>
+                <div class="item-name col">
                     {{menu_name}}
                 </div>
-                <div class="item-MRP">
-                    
+                <div class="item-MRP col">
+
                 </div>
-                <div class="item-offerPrice">
-                      {{Offer_Price}}
+                <div class="item-offerPrice col">
+                    {{Offer_Price}}
                 </div>
             </div>
             {{/each}}
-     
+
         </div>
         <!-- ! End Of Fish And SeaFood -->
 
@@ -275,22 +291,22 @@
 
         <!-- ! Continue of Fish And SeaFood on 2nd Page -->
         <div class="fish-and-sea-food-second-page item-Section">
-  
-         
-        {{#each data.fish_and_seaFood_sec2}}
-        <div class="item-row row ">
 
-            <div class="item-name">
-                {{menu_name}}
+
+            {{#each data.fish_and_seaFood_sec2}}
+            <div class="item-row row ">
+
+                <div class="item-name col">
+                    {{menu_name}}
+                </div>
+                <div class="item-MRP">
+
+                </div>
+                <div class="item-offerPrice">
+                    {{Offer_Price}}
+                </div>
             </div>
-            <div class="item-MRP">
-                
-            </div>
-            <div class="item-offerPrice">
-                  {{Offer_Price}}
-            </div>
-        </div>
-        {{/each}}
+            {{/each}}
         </div>
         <!-- ! End Of Fish And SeaFood -->
 
@@ -302,15 +318,18 @@
 
             {{#each data.river_fish}}
             <div class="item-row row ">
-  
-                <div class="item-name">
+
+                <div class="item-Id col">
+                    {{menu_id}}
+                </div>
+                <div class="item-name col">
                     {{menu_name}}
                 </div>
-                <div class="item-MRP">
-                    
+                <div class="item-MRP col">
+
                 </div>
-                <div class="item-offerPrice">
-                      {{Offer_Price}}
+                <div class="item-offerPrice col">
+                    {{Offer_Price}}
                 </div>
             </div>
             {{/each}}
@@ -327,15 +346,18 @@
 
             {{#each data.Mutton}}
             <div class="item-row row ">
-  
-                <div class="item-name">
+
+                <div class="item-Id col">
+                    {{menu_id}}
+                </div>
+                <div class="item-name col">
                     {{menu_name}}
                 </div>
-                <div class="item-MRP">
-                    
+                <div class="item-MRP col">
+
                 </div>
-                <div class="item-offerPrice">
-                      {{Offer_Price}}
+                <div class="item-offerPrice col">
+                    {{Offer_Price}}
                 </div>
             </div>
             {{/each}}
@@ -346,20 +368,20 @@
 
         <!-- Contact Me Section -->
         <!-- <div class="contact-me-section">
-            <div class="contact-heading">
-                TO ORDER YOUR FAVORITE FISH | CHICKEN | MUTTON
-                <hr class="last-line" />
-            </div>
-            <center>
-                <div class="call-section"">
-                    
-                        CALL /WHATSAPP
-                        8884442062
-            
-                </div>
-            </center>
-
-        </div> -->
+              <div class="contact-heading">
+                  TO ORDER YOUR FAVORITE FISH | CHICKEN | MUTTON
+                  <hr class="last-line" />
+              </div>
+              <center>
+                  <div class="call-section"">
+                      
+                          CALL /WHATSAPP
+                          8884442062
+              
+                  </div>
+              </center>
+  
+          </div> -->
 
 
 
