@@ -86,7 +86,7 @@ let data = {
 UpdateMyData();
 
 nodeHtmlToImage({
-  content: [{ background_image: dataURI, data: data, output: './Meatable_MenuCard.png' }],
+  content: [{ background_image: dataURI, data: data, output: './image1.png' }],
 
   html: `<!DOCTYPE html>
   <html lang="en">
