@@ -45,7 +45,6 @@ const image = fs.readFileSync('./BgImg.jpg');
 const base64Image = new Buffer.from(image).toString('base64');
 const dataURI = 'data:image/Jpeg;base64,' + base64Image;
 
-
 let data = {
   special_offer_zone: [
     { menu_name: 'tandoor', MRP: 150, Offer_Price: 123 },
@@ -57,10 +56,10 @@ let data = {
     { menu_name: 'bla', Offer_Price: 442 },
   ],
   Chicken: [
-    { menu_name: 'tandoor', Offer_Price: 123 },
-    { menu_name: 'Leg', Offer_Price: 1234 },
-    { menu_name: 'bla', Offer_Price: 442 },
-  ],
+    { menu_name: 'C1.Chicken Skinout', Offer_Price: '249' },
+    { menu_name: 'C2.Chicken Boneless', Offer_Price: '369' },
+    { menu_name: 'C3.Chicken Drumstick', Offer_Price: '329' },
+ ],
   fish_and_seaFood_sec1: [
     { menu_name: 'tandoor', Offer_Price: 123 },
     { menu_name: 'Leg', Offer_Price: 1234 },
@@ -73,10 +72,13 @@ let data = {
     { menu_name: 'bla', Offer_Price: 442 },
   ],
   river_fish: [
-    { menu_name: 'tandoor', Offer_Price: 123 },
-    { menu_name: 'Leg', Offer_Price: 1234 },
-    { menu_name: 'bla', Offer_Price: 442 },
-  ],
+    { menu_name: 'RF1.  Rohu', Offer_Price: '179' },
+    { menu_name: 'RF2.  Catla', Offer_Price: '219' },
+    { menu_name: 'RF3.  Roopchand', Offer_Price: '179' },
+    { menu_name: 'RF4.  SeaBass', Offer_Price: '689' },
+    { menu_name: 'RF5.  Pabda', Offer_Price: '489' },
+ 
+],
   Mutton: [
     { menu_name: 'tandoor', Offer_Price: 123 },
     { menu_name: 'Leg', Offer_Price: 1234 },
@@ -86,7 +88,13 @@ let data = {
 UpdateMyData();
 
 nodeHtmlToImage({
-  content: [{ background_image: dataURI, data: data, output: './Meatable_MenuCard.png' }],
+  content: [
+    {
+      background_image: dataURI,
+      data: data,
+      output: './Meatable_MenuCard.png',
+    },
+  ],
 
   html: `<!DOCTYPE html>
   <html lang="en">
@@ -468,4 +476,3 @@ nodeHtmlToImage({
   
   </html>`,
 }).then(() => console.log('The images were created successfully!'));
-
